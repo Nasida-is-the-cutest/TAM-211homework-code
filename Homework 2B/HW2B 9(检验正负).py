@@ -1,0 +1,14 @@
+f1=35
+f2=43
+f3=20
+f4=50
+f=f1+f2+f3+f4
+print("F =", f)
+Mx=-(f1*11+f2*13+f3*0+f4*3)
+print("Mx =", Mx)
+My=f1*0+f2*10+f3*10+f4*4
+print("My =", My)
+px=My/f
+py=-Mx/f
+print("px =", px)
+print("py =", py)
