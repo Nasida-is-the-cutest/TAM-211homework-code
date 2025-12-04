@@ -1,0 +1,14 @@
+import numpy as np
+
+w = 1.5 # m
+row = 1000.00 # kg/m^3
+h1 = 0.5 # m
+h2 = 0.5 # m
+l = 2 # m
+g=9.81
+theta = np.radians(50.00) # deg
+Fcx = row*g*w*(h1+h1+h2)/2*h2
+print(Fcx/1000)
+Fa = (row*g*h1*l*w*l/2+Fcx*(5*h2/9)+Fcx/np.tan(theta)*(l+5*h2/9/np.tan(theta)))/(l+h2/np.tan(theta))
+Fcy = row*g*h1*l*w+Fcx/np.tan(theta)-Fa
+print(Fa/1000,Fcy/1000)
